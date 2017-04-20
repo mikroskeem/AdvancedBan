@@ -4,6 +4,15 @@ Check out our [Spigot-Page](https://www.spigotmc.org/resources/advancedban.8695/
 
 _Coded by Leoko_ 
 
+## This is a fork
+
+See [original code](https://github.com/DevLeoko/AdvancedBan)  
+This fork removes some annoying features completely, such as broadcasting when __Leoko__ joins the game,
+Metrics and update check.
+
+Note: I do not support this fork really, it was created for my own purposes. So you are on your own with this.  
+There might be more features coming (*stares at synchronous HTTP calls*), but I can't promise them.
+
 ## Description
 AdvancedBan is an All-In-One Punishment-System with warns, tempwarns, mutes, tempmutes, bans, tempbans, ipbans and kicks.
 There is also a PlayerHistory so you can see the players past punishments and 
