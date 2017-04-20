@@ -68,25 +68,6 @@ public class Universal {
         mi.setCommandExecutor("systemprefs");
         mi.setCommandExecutor("unpunish");
 
-        String upt = "You have the newest version";
-        String response = getFromURL("http://dev.skamps.eu/api/abVer.txt");
-        if(response == null){
-            upt = "Failed to check for updates :(";
-        }else if(!response.equalsIgnoreCase(mi.getVersion())){
-            upt = "There is a new version available! ["+response+"]";
-        }
-
-        getMethods().scheduleAsyncRep(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    new URL("http://dev.skamps.eu/api/stats.php?player="+getMethods().getOnlinePlayers().length).openConnection().connect();
-                } catch (IOException e) {
-                    System.out.println("Failed to connect to stats-server");
-                }
-            }
-        }, 20*60*15, 20*60*15);
-
         if(mi.getBoolean(mi.getConfig(), "DetailedEnableMessage", true)) {
             System.out.println("\n \n[]=====[Enabling AdvancedBan]=====[]"
                     + "\n| Information:"
@@ -97,8 +78,6 @@ public class Universal {
                     + "\n| Support:"
                     + "\n|   Skype: Leoko33"
                     + "\n|   Mail: Leoko4433@gmail.com"
-                    + "\n| Update:"
-                    + "\n|   "+upt
                     + "\n[]================================[]\n ");
         }else {
             System.out.println("Enabling AdvancedBan on Version " + mi.getVersion());
