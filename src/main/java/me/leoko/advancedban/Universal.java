@@ -8,9 +8,6 @@ import me.leoko.advancedban.utils.Punishment;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -143,16 +140,6 @@ public class Universal {
         List<String> exempt = getMethods().getStringList(getMethods().getConfig(), "ExemptPlayers");
         if(exempt != null) for(String str : exempt) if(name.equalsIgnoreCase(str)) return true;
         return false;
-    }
-
-    public boolean broadcastLeoko(){
-        File readme = new File(getMethods().getDataFolder(), "readme.txt");
-        if(!readme.exists()) return true;
-        try {
-            if(Files.readAllLines(Paths.get(readme.getPath()),Charset.defaultCharset()).get(0).equalsIgnoreCase("I don't want that there will be any message when the dev of this plugin joins the server! I want this even though the plugin is 100% free and the join-message is the only reward for the Dev :("))
-                return false;
-        } catch (IOException e) { }
-        return true;
     }
 
     public String callConnection(String name, String ip) {
