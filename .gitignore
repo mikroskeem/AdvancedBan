@@ -1,18 +1,21 @@
+# ---> Java
 *.class
-.settings
-.classpath
-bin
-/dependency-reduced-pom.xml
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
 # Package Files #
 *.jar
 *.war
 *.ear
-**/target
-/lib
-/.classpath
-/.project
-**/*.iml
-**/*~
-.idea
-**/target
-out/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IntelliJ IDEA
+*.iml
+.idea/
+
+# Maven
+target/
+dependency-reduced-pom.xml
